@@ -1,7 +1,7 @@
 
 const form = document.getElementById('form');
-const heroi = document.getElementById('heroi');
-const xp = document.getElementById('xp');
+const heroi = document.getElementById('vitoria');
+const xp = document.getElementById('derrota');
 const resultadoDiv = document.getElementById('resultado');
 
 
@@ -12,35 +12,35 @@ form.addEventListener('submit', (event)=> {
 })
 
 function checkinputdados(){
-    const xpValue = xp.value;
-    const heroiValue = heroi.value;
+    const derrotaValue = derrota.value;
+    const vitoriaValue = vitoria.value;
+
+    const saldovitorias = (vitoriaValue - derrotaValue)
 
     let mensagem = "";
 
-    if (xpValue <= 1000) {
-        mensagem = `O Herói de nome ${heroiValue} está no nível de Ferro.`
+    if (saldovitorias <= 10) {
+        mensagem = `O Herói tem saldo de ${saldovitorias} vitória(s) e está no Ranking Ferro.`
     }
-    else if (xpValue >= 1001 && xpValue <= 2000) {
-        mensagem = `O Herói de nome ${heroiValue} está no nível de Bronze.`
+    else if (saldovitorias >= 11 && saldovitorias <= 20) {
+        mensagem = `O Herói tem saldo de ${saldovitorias} vitória(s) e está no Ranking Bronze.`
     }
-    else if (xpValue >= 2001 && xpValue <= 5000 ) {
-        mensagem = `O Herói de nome ${heroiValue} está no nível de Prata.`
+    else if (saldovitorias >= 21 && saldovitorias <= 50 ) {
+        mensagem = `O Herói tem saldo de ${saldovitorias} vitória(s) e está no Ranking Prata.`
     }
-    else if (xpValue >= 6001 && xpValue <= 7000  ) {
-        mensagem = `O Herói de nome ${heroiValue} está no nível de Ouro.`
+    else if (saldovitorias >= 51 && saldovitorias <= 80  ) {
+        mensagem = `O Herói tem saldo de ${saldovitorias} vitória(s) e está no Ranking Ouro.`
     }
-    else if (xpValue >= 7001 && xpValue <= 8000  ) {
-        mensagem = `O Herói de nome ${heroiValue} está no nível de Platina.`
+    else if (saldovitorias >= 81 && saldovitorias <= 90  ) {
+        mensagem = `O Herói tem saldo de ${saldovitorias} vitória(s) e está no Ranking Diamente.`
     }
-    else if (xpValue >= 8001 && xpValue <= 9000  ) {
-        mensagem = `O Herói de nome ${heroiValue} está no nível de Ascendente.`
+    else if (saldovitorias >= 91 && saldovitorias <= 100  ) {
+        mensagem = `O Herói tem saldo de ${saldovitorias} vitória(s) e está no Ranking Lendário.`
     }
-    else if (xpValue >= 9001 && xpValue <= 10000  ) {
-        mensagem = `O Herói de nome ${heroiValue} está no nível de Imortal.`
-    }
-    else if (xpValue >= 10001) {
-        mensagem = `O Herói de nome ${heroiValue} está no nível de Radiante.`
+    else if (saldovitorias >= 101) {
+        mensagem = `O Herói tem saldo de ${saldovitorias} vitória(s) e está no Ranking Imortal.`
     };
+
 
     resultadoDiv.innerHTML = mensagem;
 }
