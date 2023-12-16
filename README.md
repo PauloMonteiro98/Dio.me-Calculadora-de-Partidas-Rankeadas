@@ -2,7 +2,7 @@
 
 ## Introdução
 
-Esse projeto tem como objetivo desenvolver um programa que solicite a quantidade de vitórias e derrotas e no final fornecerá o ranking do jogador.
+Esse projeto tem como objetivo desenvolver um programa que solicite a quantidade de vitórias e derrotas do jogador. No final o sistema deverá calcular as entradas fornecidas e informar o ranking do jogador.
 
 ## Tecnologias utilizadas
 
